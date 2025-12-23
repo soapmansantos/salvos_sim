@@ -1,0 +1,352 @@
+<?xml version="1.0" ?>
+<sdf version='1.11'>
+  <model name='hermes'>
+    <link name='base_link'>
+      <inertial>
+        <pose>0 0 0.80000000000000004 0 0 0</pose>
+        <mass>1630</mass>
+        <inertia>
+          <ixx>111.5</ixx>
+          <ixy>-9.5407000000000193e-05</ixy>
+          <ixz>-0.000113200000002535</ixz>
+          <iyy>111.5</iyy>
+          <iyz>-0.0031419999999999998</iyz>
+          <izz>70.099999999999994</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_fixed_joint_lump__frame_collision'>
+        <pose>0 0 0.80000000000000004 0 -1.5707963267948966 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/santos/dev_ws/src/salvos_gz/models/hermes/meshes/hermes_mesh_scaled.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_fixed_joint_lump__frame_visual'>
+        <pose>0 0 0.80000000000000004 0 -1.5707963267948966 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/santos/dev_ws/src/salvos_gz/models/hermes/meshes/hermes_mesh_scaled.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>1 1 1 1</diffuse>
+          <ambient>1 1 1 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='fl_rotor_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.81010181980132401 0.81000000000000005 1.2998350143343129 -3.1415899999998351 -0.00040734641020577061 -5.4046517934472906e-10</pose>
+      <parent>base_link</parent>
+      <child>fl_rotor</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>0.10000000000000001</effort>
+          <velocity>100</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <damping>0.01</damping>
+          <friction>0.001</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='fl_rotor'>
+      <pose relative_to='fl_rotor_joint'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>5</mass>
+        <inertia>
+          <ixx>43</ixx>
+          <ixy>-0.048599999999999997</ixy>
+          <ixz>-0.048599999999999997</ixz>
+          <iyy>34.329999999999998</iyy>
+          <iyz>6.0945e-05</iyz>
+          <izz>34.329999999999998</izz>
+        </inertia>
+      </inertial>
+      <collision name='fl_rotor_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/santos/dev_ws/src/salvos_gz/models/hermes/meshes/propeller_scaled.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fl_rotor_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/santos/dev_ws/src/salvos_gz/models/hermes/meshes/propeller_scaled.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0 0 1 1</diffuse>
+          <ambient>0 0 1 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='fr_rotor_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.88010181834942691 -0.88 1.2998207572100551 -3.1415899999998351 -0.00040734641020577061 -5.4046517934472906e-10</pose>
+      <parent>base_link</parent>
+      <child>fr_rotor</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>0.10000000000000001</effort>
+          <velocity>100</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <damping>0.01</damping>
+          <friction>0.001</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='fr_rotor'>
+      <pose relative_to='fr_rotor_joint'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>5</mass>
+        <inertia>
+          <ixx>43</ixx>
+          <ixy>-0.048599999999999997</ixy>
+          <ixz>-0.048599999999999997</ixz>
+          <iyy>34.329999999999998</iyy>
+          <iyz>6.0945e-05</iyz>
+          <izz>34.329999999999998</izz>
+        </inertia>
+      </inertial>
+      <collision name='fr_rotor_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/santos/dev_ws/src/salvos_gz/models/hermes/meshes/propeller_scaled.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fr_rotor_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/santos/dev_ws/src/salvos_gz/models/hermes/meshes/propeller_scaled.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0 0 1 1</diffuse>
+          <ambient>0 0 1 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='nose_rotor_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.00020367320369518721 0 1.799999979258613 -3.1415899999998351 -0.00040734641020577061 -5.4046517934472906e-10</pose>
+      <parent>base_link</parent>
+      <child>nose_rotor</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>0.10000000000000001</effort>
+          <velocity>100</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <damping>0.01</damping>
+          <friction>0.001</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='nose_rotor'>
+      <pose relative_to='nose_rotor_joint'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>5</mass>
+        <inertia>
+          <ixx>43</ixx>
+          <ixy>-0.048599999999999997</ixy>
+          <ixz>-0.048599999999999997</ixz>
+          <iyy>34.329999999999998</iyy>
+          <iyz>6.0945e-05</iyz>
+          <izz>34.329999999999998</izz>
+        </inertia>
+      </inertial>
+      <collision name='nose_rotor_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/santos/dev_ws/src/salvos_gz/models/hermes/meshes/propeller_scaled.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='nose_rotor_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/santos/dev_ws/src/salvos_gz/models/hermes/meshes/propeller_scaled.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0 0 1 1</diffuse>
+          <ambient>0 0 1 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='rl_rotor_joint' type='revolute'>
+      <pose relative_to='base_link'>0.92989814410866256 -0.93000000000000005 1.3001894057087431 -3.1415899999998351 -0.00040734641020577061 -5.4046517934472906e-10</pose>
+      <parent>base_link</parent>
+      <child>rl_rotor</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>0.10000000000000001</effort>
+          <velocity>100</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <damping>0.01</damping>
+          <friction>0.001</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rl_rotor'>
+      <pose relative_to='rl_rotor_joint'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>5</mass>
+        <inertia>
+          <ixx>43</ixx>
+          <ixy>-0.048599999999999997</ixy>
+          <ixz>-0.048599999999999997</ixz>
+          <iyy>34.329999999999998</iyy>
+          <iyz>6.0945e-05</iyz>
+          <izz>34.329999999999998</izz>
+        </inertia>
+      </inertial>
+      <collision name='rl_rotor_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/santos/dev_ws/src/salvos_gz/models/hermes/meshes/propeller_scaled.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rl_rotor_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/santos/dev_ws/src/salvos_gz/models/hermes/meshes/propeller_scaled.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0 0 1 1</diffuse>
+          <ambient>0 0 1 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='rr_rotor_joint' type='revolute'>
+      <pose relative_to='base_link'>0.92989814410866256 0.93000000000000005 1.3001894057087431 -3.1415899999998351 -0.00040734641020577061 -5.4046517934472906e-10</pose>
+      <parent>base_link</parent>
+      <child>rr_rotor</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>0.10000000000000001</effort>
+          <velocity>100</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <damping>0.01</damping>
+          <friction>0.001</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rr_rotor'>
+      <pose relative_to='rr_rotor_joint'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>5</mass>
+        <inertia>
+          <ixx>43</ixx>
+          <ixy>-0.048599999999999997</ixy>
+          <ixz>-0.048599999999999997</ixz>
+          <iyy>34.329999999999998</iyy>
+          <iyz>6.0945e-05</iyz>
+          <izz>34.329999999999998</izz>
+        </inertia>
+      </inertial>
+      <collision name='rr_rotor_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/santos/dev_ws/src/salvos_gz/models/hermes/meshes/propeller_scaled.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rr_rotor_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/santos/dev_ws/src/salvos_gz/models/hermes/meshes/propeller_scaled.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0 0 1 1</diffuse>
+          <ambient>0 0 1 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <plugin name='gz::sim::systems::JointController' filename='libgz-sim-joint-controller-system.so'>
+      <joint_name>nose_rotor_joint</joint_name>
+      <topic>/model/hermes/joint/nose_rotor_joint/cmd_vel</topic>
+    </plugin>
+    <plugin name='gz::sim::systems::JointController' filename='libgz-sim-joint-controller-system.so'>
+      <joint_name>fl_rotor_joint</joint_name>
+      <topic>/model/hermes/joint/fl_rotor_joint/cmd_vel</topic>
+    </plugin>
+    <plugin name='gz::sim::systems::JointController' filename='libgz-sim-joint-controller-system.so'>
+      <joint_name>fr_rotor_joint</joint_name>
+      <topic>/model/hermes/joint/fr_rotor_joint/cmd_vel</topic>
+    </plugin>
+    <plugin name='gz::sim::systems::JointController' filename='libgz-sim-joint-controller-system.so'>
+      <joint_name>rl_rotor_joint</joint_name>
+      <topic>/model/hermes/joint/rl_rotor_joint/cmd_vel</topic>
+    </plugin>
+    <plugin name='gz::sim::systems::JointController' filename='libgz-sim-joint-controller-system.so'>
+      <joint_name>rr_rotor_joint</joint_name>
+      <topic>/model/hermes/joint/rr_rotor_joint/cmd_vel</topic>
+    </plugin>
+    <frame name='dummy_joint' attached_to='base_link'>
+      <pose>0 0 0.80000000000000004 3.1415926535897931 -1.5705926535909005 3.1415926535897931</pose>
+    </frame>
+    <frame name='frame' attached_to='dummy_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+  </model>
+</sdf>

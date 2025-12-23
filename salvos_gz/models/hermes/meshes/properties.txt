@@ -1,0 +1,481 @@
+tail.stl
+
+General
+	Part Number	NewTail
+	Part Name	NewTail v6
+	Description
+	Material Name	Steel
+
+Manage
+	Item Number
+	Lifecycle
+	Revision
+	State	Working
+	Change Order
+
+Physical
+	Mass	1.630E+06 g
+	Volume	2.076E+08 mm^3
+	Density	0.008 g / mm^3
+	Area	1.887E+06 mm^2
+	World X,Y,Z	-285.038 mm, -2516.686 mm, 1106.821 mm
+	Center of Mass	-655.083 mm, -2516.692 mm, 1106.822 mm
+	Bounding Box
+		Length	779.581 mm
+		Width	601.017 mm
+		Height	600.198 mm
+	Moment of Inertia at Center of Mass   (g mm^2)
+		Ixx	7.010E+10
+		Ixy	-3.142E+06
+		Ixz	1.132E+05
+		Iyx	-3.142E+06
+		Iyy	1.115E+11
+		Iyz	95407.026
+		Izx	1.132E+05
+		Izy	95407.026
+		Izz	1.115E+11
+	Moment of Inertia at Origin   (g mm^2)
+		Ixx	1.239E+13
+		Ixy	-2.687E+12
+		Ixz	1.182E+12
+		Iyx	-2.687E+12
+		Iyy	2.807E+12
+		Iyz	4.539E+12
+		Izx	1.182E+12
+		Izy	4.539E+12
+		Izz	1.113E+13
+
+
+wing_connection.stl (base_link)
+
+General
+	Part Number	Connection
+	Part Name	Connection v1
+	Description
+	Material Name	Steel
+
+Manage
+	Item Number
+	Lifecycle
+	Revision
+	State	Working
+	Change Order
+
+Physical
+	Mass	9.886E+05 g
+	Volume	1.259E+08 mm^3
+	Density	0.008 g / mm^3
+	Area	2.238E+06 mm^2
+	World X,Y,Z	114.962 mm, -2516.686 mm, 1106.821 mm
+	Center of Mass	-78.732 mm, -2516.437 mm, 1107.07 mm
+	Bounding Box
+		Length	400.00 mm
+		Width	600.00 mm
+		Height	600.00 mm
+	Moment of Inertia at Center of Mass   (g mm^2)
+		Ixx	4.300E+10
+		Ixy	-4.860E+07
+		Ixz	-4.860E+07
+		Iyx	-4.860E+07
+		Iyy	3.433E+10
+		Iyz	60945.509
+		Izx	-4.860E+07
+		Izy	60945.509
+		Izz	3.433E+10
+	Moment of Inertia at Origin   (g mm^2)
+		Ixx	7.515E+12
+		Ixy	-1.959E+11
+		Ixz	8.612E+10
+		Iyx	-1.959E+11
+		Iyy	1.252E+12
+		Iyz	2.754E+12
+		Izx	8.612E+10
+		Izy	2.754E+12
+		Izz	6.301E+12
+
+
+
+wing_nose_connection.stl
+
+General
+	Part Number	P500 nose skin
+	Part Name	P500 nose skin v2
+	Description
+	Material Name	Steel
+
+Manage
+	Item Number
+	Lifecycle
+	Revision
+	State
+	Change Order
+
+Physical
+	Mass	24509.558 g
+	Volume	3.122E+06 mm^3
+	Density	0.008 g / mm^3
+	Area	1.263E+06 mm^2
+	World X,Y,Z	514.962 mm, -2519.308 mm, 1108.278 mm
+	Center of Mass	655.86 mm, -2519.273 mm, 1108.289 mm
+	Bounding Box
+		Length	387.374 mm
+		Width	600.959 mm
+		Height	600.802 mm
+	Moment of Inertia at Center of Mass   (g mm^2)
+		Ixx	1.539E+09
+		Ixy	2554.128
+		Ixz	-17211.153
+		Iyx	2554.128
+		Iyy	1.064E+09
+		Iyz	-18014.257
+		Izx	-17211.153
+		Izy	-18014.257
+		Izz	1.064E+09
+	Moment of Inertia at Origin   (g mm^2)
+		Ixx	1.872E+11
+		Ixy	4.050E+10
+		Ixz	-1.782E+10
+		Iyx	4.050E+10
+		Iyy	4.171E+10
+		Iyz	6.843E+10
+		Izx	-1.782E+10
+		Izy	6.843E+10
+		Izz	1.672E+11
+
+
+
+nose.stl
+
+General
+	Part Number	P500 nose skin
+	Part Name	P500 nose skin v2
+	Description
+	Material Name	Steel
+
+Manage
+	Item Number
+	Lifecycle
+	Revision
+	State
+	Change Order
+
+Physical
+	Mass	24509.558 g
+	Volume	3.122E+06 mm^3
+	Density	0.008 g / mm^3
+	Area	1.263E+06 mm^2
+	World X,Y,Z	514.962 mm, -2519.308 mm, 1108.278 mm
+	Center of Mass	655.86 mm, -2519.273 mm, 1108.289 mm
+	Bounding Box
+		Length	387.374 mm
+		Width	600.959 mm
+		Height	600.802 mm
+	Moment of Inertia at Center of Mass   (g mm^2)
+		Ixx	1.539E+09
+		Ixy	2554.128
+		Ixz	-17211.153
+		Iyx	2554.128
+		Iyy	1.064E+09
+		Iyz	-18014.257
+		Izx	-17211.153
+		Izy	-18014.257
+		Izz	1.064E+09
+	Moment of Inertia at Origin   (g mm^2)
+		Ixx	1.872E+11
+		Ixy	4.050E+10
+		Ixz	-1.782E+10
+		Iyx	4.050E+10
+		Iyy	4.171E+10
+		Iyz	6.843E+10
+		Izx	-1.782E+10
+		Izy	6.843E+10
+		Izz	1.672E+11
+
+
+
+nose_cone.stl
+
+General
+	Part Number	P500 nose cone
+	Part Name	P500 nose cone v2
+	Description
+	Material Name	Steel
+
+Manage
+	Item Number
+	Lifecycle
+	Revision
+	State
+	Change Order
+
+Physical
+	Mass	5154.175 g
+	Volume	6.566E+05 mm^3
+	Density	0.008 g / mm^3
+	Area	2.685E+05 mm^2
+	World X,Y,Z	514.962 mm, -2519.308 mm, 1108.278 mm
+	Center of Mass	930.551 mm, -2519.298 mm, 1108.278 mm
+	Bounding Box
+		Length	150.009 mm
+		Width	330.707 mm
+		Height	330.401 mm
+	Moment of Inertia at Center of Mass   (g mm^2)
+		Ixx	7.453E+07
+		Ixy	1691.70
+		Ixz	32.056
+		Iyx	1691.70
+		Iyy	4.613E+07
+		Iyz	-713.494
+		Izx	32.056
+		Izy	-713.494
+		Izz	4.613E+07
+	Moment of Inertia at Origin   (g mm^2)
+		Ixx	3.912E+10
+		Ixy	1.208E+10
+		Ixz	-5.316E+09
+		Iyx	1.208E+10
+		Iyy	1.084E+10
+		Iyz	1.439E+10
+		Izx	-5.316E+09
+		Izy	1.439E+10
+		Izz	3.722E+10
+
+
+
+rl_wing.stl
+
+General
+	Part Number	Joint Bottom
+	Part Name	Joint Bottom v5
+	Description
+	Material Name	Steel
+
+Manage
+	Item Number
+	Lifecycle
+	Revision
+	State
+	Change Order
+
+Physical
+	Mass	1.806E+05 g
+	Volume	2.300E+07 mm^3
+	Density	0.008 g / mm^3
+	Area	1.646E+06 mm^2
+	World X,Y,Z	-742.796 mm, -2400.796 mm, -1103.764 mm
+	Center of Mass	-882.848 mm, -2477.286 mm, -930.991 mm
+	Bounding Box
+		Length	349.85 mm
+		Width	1771.763 mm
+		Height	816.051 mm
+	Moment of Inertia at Center of Mass   (g mm^2)
+		Ixx	5.334E+10
+		Ixy	6.809E+07
+		Ixz	-1.609E+08
+		Iyx	6.809E+07
+		Iyy	1.070E+10
+		Iyz	-1.686E+10
+		Izx	-1.609E+08
+		Izy	-1.686E+10
+		Izz	4.490E+10
+	Moment of Inertia at Origin   (g mm^2)
+		Ixx	1.318E+12
+		Ixy	-3.949E+11
+		Ixz	-1.486E+11
+		Iyx	-3.949E+11
+		Iyy	3.080E+11
+		Iyz	-4.333E+11
+		Izx	-1.486E+11
+		Izy	-4.333E+11
+		Izz	1.294E+12
+
+
+
+rr_wing.stl
+
+General
+	Part Number	Joint Bottom
+	Part Name	Joint Bottom v6
+	Description
+	Material Name	Steel
+
+Manage
+	Item Number
+	Lifecycle
+	Revision
+	State	Working
+	Change Order
+
+Physical
+	Mass	3.612E+05 g
+	Volume	4.601E+07 mm^3
+	Density	0.008 g / mm^3
+	Area	3.292E+06 mm^2
+	World X,Y,Z	-400.00 mm, 930.946 mm, -930.946 mm
+	Center of Mass	-540.053 mm, 930.946 mm, -758.173 mm
+	Bounding Box
+		Length	349.85 mm
+		Width	2053.888 mm
+		Height	816.051 mm
+	Moment of Inertia at Center of Mass   (g mm^2)
+		Ixx	1.088E+11
+		Ixy	-25.198
+		Ixz	-3.217E+08
+		Iyx	-25.198
+		Iyy	2.140E+10
+		Iyz	26.787
+		Izx	-3.217E+08
+		Izy	26.787
+		Izz	9.191E+10
+	Moment of Inertia at Origin   (g mm^2)
+		Ixx	6.294E+11
+		Ixy	1.816E+11
+		Ixz	-1.482E+11
+		Iyx	1.816E+11
+		Iyy	3.343E+11
+		Iyz	2.549E+11
+		Izx	-1.482E+11
+		Izy	2.549E+11
+		Izz	5.102E+11
+
+
+
+
+fl_wing.stl
+
+General
+	Part Number	Wing Top Left
+	Part Name	Wing Top Left v2
+	Description
+	Material Name	Steel
+
+Manage
+	Item Number
+	Lifecycle
+	Revision
+	State	Working
+	Change Order
+
+Physical
+	Mass	3.273E+05 g
+	Volume	4.169E+07 mm^3
+	Density	0.008 g / mm^3
+	Area	2.946E+06 mm^2
+	World X,Y,Z	-589.847 mm, -1015.574 mm, 824.339 mm
+	Center of Mass	-728.942 mm, -1015.574 mm, 666.129 mm
+	Bounding Box
+		Length	350.173 mm
+		Width	1911.666 mm
+		Height	764.375 mm
+	Moment of Inertia at Center of Mass   (g mm^2)
+		Ixx	8.803E+10
+		Ixy	711.228
+		Ixz	-1.488E+08
+		Iyx	711.228
+		Iyy	1.720E+10
+		Iyz	-2312.377
+		Izx	-1.488E+08
+		Izy	-2312.377
+		Izz	7.495E+10
+	Moment of Inertia at Origin   (g mm^2)
+		Ixx	5.708E+11
+		Ixy	-2.423E+11
+		Ixz	1.588E+11
+		Iyx	-2.423E+11
+		Iyy	3.363E+11
+		Iyz	2.214E+11
+		Izx	1.588E+11
+		Izy	2.214E+11
+		Izz	5.864E+11
+
+
+
+fr_wing.stl
+
+
+
+Bodies (1)
+Area	1.473E+06 mm^2
+Density	0.008 g / mm^3
+Mass	1.636E+05 g
+Volume	2.085E+07 mm^3
+Physical Material	Steel
+Appearance	Steel - Satin
+
+Bounding Box
+	Length 	 350.167 mm
+	Width 	 1650.936 mm
+	Height 	 764.372 mm
+Center of Mass	-709.979 mm, 933.703 mm, 779.002 mm
+
+Moment of Inertia at Center of Mass   (g mm^2)
+	Ixx = 4.319E+10
+	Ixy = -2.971E+07
+	Ixz = -7.440E+07
+	Iyx = -2.971E+07
+	Iyy = 8.600E+09
+	Iyz = 1.381E+10
+	Izx = -7.440E+07
+	Izy = 1.381E+10
+	Izz = 3.665E+10
+
+Moment of Inertia at Origin   (g mm^2)
+	Ixx = 2.852E+11
+	Ixy = 1.084E+11
+	Ixz = 9.043E+10
+	Iyx = 1.084E+11
+	Iyy = 1.904E+11
+	Iyz = -1.052E+11
+	Izx = 9.043E+10
+	Izy = -1.052E+11
+	Izz = 2.618E+11
+
+
+
+propeller.stl
+
+General
+	Part Number	Motor
+	Part Name	Motor v1
+	Description
+	Material Name	(Various)
+
+Manage
+	Item Number
+	Lifecycle
+	Revision
+	State
+	Change Order
+
+Physical
+	Mass	12541.775 g
+	Volume	1.598E+06 mm^3
+	Density	0.008 g / mm^3
+	Area	2.346E+05 mm^2
+	World X,Y,Z	-325.00 mm, -880.252 mm, 880.252 mm
+	Center of Mass	-431.682 mm, -880.252 mm, 880.252 mm
+	Bounding Box
+		Length	168.483 mm
+		Width	140.00 mm
+		Height	1213.00 mm
+	Moment of Inertia at Center of Mass   (g mm^2)
+		Ixx	1.376E+08
+		Ixy	0.00
+		Ixz	0.001
+		Iyx	0.00
+		Iyy	1.463E+08
+		Iyz	9.964E+06
+		Izx	0.001
+		Izy	9.964E+06
+		Izz	3.086E+07
+	Moment of Inertia at Origin   (g mm^2)
+		Ixx	1.957E+10
+		Ixy	-4.766E+09
+		Ixz	4.766E+09
+		Iyx	-4.766E+09
+		Iyy	1.220E+10
+		Iyz	9.728E+09
+		Izx	4.766E+09
+		Izy	9.728E+09
+		Izz	1.209E+10
+

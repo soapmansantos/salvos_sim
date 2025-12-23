@@ -1,0 +1,33 @@
+[0.634s] Invoking command in '/home/santos/dev_ws/src/salvos_control': CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/santos/dev_ws/src/salvos_control/build/salvos_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/santos/dev_ws/src/salvos_control/install/salvos_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/salvos_control build --build-base /home/santos/dev_ws/src/salvos_control/build/salvos_control/build install --record /home/santos/dev_ws/src/salvos_control/build/salvos_control/install.log --single-version-externally-managed install_data
+[0.816s] running egg_info
+[0.816s] creating build/salvos_control/salvos_control.egg-info
+[0.829s] writing build/salvos_control/salvos_control.egg-info/PKG-INFO
+[0.830s] writing dependency_links to build/salvos_control/salvos_control.egg-info/dependency_links.txt
+[0.830s] writing requirements to build/salvos_control/salvos_control.egg-info/requires.txt
+[0.830s] writing top-level names to build/salvos_control/salvos_control.egg-info/top_level.txt
+[0.830s] writing manifest file 'build/salvos_control/salvos_control.egg-info/SOURCES.txt'
+[0.856s] reading manifest file 'build/salvos_control/salvos_control.egg-info/SOURCES.txt'
+[0.857s] adding license file 'LICENSE'
+[0.857s] writing manifest file 'build/salvos_control/salvos_control.egg-info/SOURCES.txt'
+[0.857s] running build
+[0.857s] running build_py
+[0.857s] creating /home/santos/dev_ws/src/salvos_control/build/salvos_control/build
+[0.857s] creating /home/santos/dev_ws/src/salvos_control/build/salvos_control/build/lib
+[0.857s] creating /home/santos/dev_ws/src/salvos_control/build/salvos_control/build/lib/salvos_control
+[0.857s] copying salvos_control/__init__.py -> /home/santos/dev_ws/src/salvos_control/build/salvos_control/build/lib/salvos_control
+[0.857s] running install
+[0.862s] running install_lib
+[0.876s] creating /home/santos/dev_ws/src/salvos_control/install/salvos_control/lib/python3.12/site-packages/salvos_control
+[0.876s] copying /home/santos/dev_ws/src/salvos_control/build/salvos_control/build/lib/salvos_control/__init__.py -> /home/santos/dev_ws/src/salvos_control/install/salvos_control/lib/python3.12/site-packages/salvos_control
+[0.876s] byte-compiling /home/santos/dev_ws/src/salvos_control/install/salvos_control/lib/python3.12/site-packages/salvos_control/__init__.py to __init__.cpython-312.pyc
+[0.876s] running install_data
+[0.876s] creating /home/santos/dev_ws/src/salvos_control/install/salvos_control/share/ament_index
+[0.876s] creating /home/santos/dev_ws/src/salvos_control/install/salvos_control/share/ament_index/resource_index
+[0.876s] creating /home/santos/dev_ws/src/salvos_control/install/salvos_control/share/ament_index/resource_index/packages
+[0.876s] copying resource/salvos_control -> /home/santos/dev_ws/src/salvos_control/install/salvos_control/share/ament_index/resource_index/packages
+[0.877s] copying package.xml -> /home/santos/dev_ws/src/salvos_control/install/salvos_control/share/salvos_control
+[0.877s] running install_egg_info
+[0.892s] Copying build/salvos_control/salvos_control.egg-info to /home/santos/dev_ws/src/salvos_control/install/salvos_control/lib/python3.12/site-packages/salvos_control-0.0.0-py3.12.egg-info
+[0.892s] running install_scripts
+[0.982s] writing list of installed files to '/home/santos/dev_ws/src/salvos_control/build/salvos_control/install.log'
+[1.016s] Invoked command in '/home/santos/dev_ws/src/salvos_control' returned '0': CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/santos/dev_ws/src/salvos_control/build/salvos_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/santos/dev_ws/src/salvos_control/install/salvos_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/salvos_control build --build-base /home/santos/dev_ws/src/salvos_control/build/salvos_control/build install --record /home/santos/dev_ws/src/salvos_control/build/salvos_control/install.log --single-version-externally-managed install_data

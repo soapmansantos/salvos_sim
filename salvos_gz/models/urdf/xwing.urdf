@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<robot name="quadrotor">
+
+  <!-- Base link -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <!-- Arms and propellers -->
+  <!-- Define positions for each arm at 45-degree angles -->
+  <!-- Each arm is fixed to the base_link -->
+
+  <!-- Arm 1 -->
+  <link name="arm_1">
+    <visual>
+      <geometry>
+        <box size="0.4 0.02 0.02"/>
+      </geometry>
+      <origin xyz="0.2 0 0" rpy="0 0 0.785398"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.4 0.02 0.02"/>
+      </geometry>
+      <origin xyz="0.2 0 0" rpy="0 0 0.785398"/>
+    </collision>
+  </link>
+  <joint name="joint_arm_1" type="fixed">
+    <parent link="base_link"/>
+    <child link="arm_1"/>
+    <origin xyz="0 0 0" rpy="0 0 0.785398"/>
+  </joint>
+
+  <!-- Propeller 1 -->
+  <link name="propeller_1">
+    <visual>
+      <geometry>
+        <box size="0.1 0.01 0.01"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.1 0.01 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_propeller_1" type="revolute">
+    <parent link="arm_1"/>
+    <child link="propeller_1"/>
+    <origin xyz="0.2 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1.0" velocity="10.0" lower="-3.14" upper="3.14"/>
+  </joint>
+
+  <!-- Repeat for other 3 arms + propellers with appropriate rotation and origin -->
+  <!-- You can copy and paste the arm_1 and propeller_1 blocks and update arm_2, arm_3, arm_4 etc -->
+
+</robot>

@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="gazebo_control" params="">
+
+    <gazebo>
+
+      <!-- Nose rotor -->
+      <plugin name="gz::sim::systems::JointController" filename="libgz-sim-joint-controller-system.so">
+        <joint_name>nose_rotor_joint</joint_name>
+        <topic>/model/hermes/joint/nose_rotor_joint/cmd_vel</topic>
+      </plugin>
+
+      <!-- Front-left rotor -->
+      <plugin name="gz::sim::systems::JointController" filename="libgz-sim-joint-controller-system.so">
+        <joint_name>fl_rotor_joint</joint_name>
+        <topic>/model/hermes/joint/fl_rotor_joint/cmd_vel</topic>
+      </plugin>
+
+      <!-- Front-right rotor -->
+      <plugin name="gz::sim::systems::JointController" filename="libgz-sim-joint-controller-system.so">
+        <joint_name>fr_rotor_joint</joint_name>
+        <topic>/model/hermes/joint/fr_rotor_joint/cmd_vel</topic>
+      </plugin>
+
+      <!-- Rear-left rotor -->
+      <plugin name="gz::sim::systems::JointController" filename="libgz-sim-joint-controller-system.so">
+        <joint_name>rl_rotor_joint</joint_name>
+        <topic>/model/hermes/joint/rl_rotor_joint/cmd_vel</topic>
+      </plugin>
+
+      <!-- Rear-right rotor -->
+      <plugin name="gz::sim::systems::JointController" filename="libgz-sim-joint-controller-system.so">
+        <joint_name>rr_rotor_joint</joint_name>
+        <topic>/model/hermes/joint/rr_rotor_joint/cmd_vel</topic>
+      </plugin>
+
+
+      <plugin filename="/opt/ros/jazzy/opt/gz_sim_vendor/lib/gz-sim-8/plugins/libgz-sim-multicopter-motor-model-system.so"
+              name="gz::sim::systems::MulticopterMotorModel">
+
+        <robotNamespace>hermes</robotNamespace>
+
+        <!-- Nose rotor -->
+        <motor>
+          <jointName>nose_rotor_joint</jointName>
+          <linkName>nose_rotor</linkName>
+          <turningDirection>ccw</turningDirection>
+          <motorConstant>0.0075</motorConstant>         <!-- thrust coefficient -->
+          <momentConstant>0.06</momentConstant>
+          <commandSubTopic>gazebo/command/motor_speed</commandSubTopic>
+          <motorNumber>0</motorNumber>
+          <rotorDragCoefficient>2.5e-4</rotorDragCoefficient>
+          <rollingMomentCoefficient>1e-6</rollingMomentCoefficient>
+          <motorSpeedPubTopic>/hermes/motor_speed/m0</motorSpeedPubTopic>
+          <rotorVelocitySlowdownSim>1</rotorVelocitySlowdownSim>
+          <timeConstantUp>0.0125</timeConstantUp>
+          <timeConstantDown>0.025</timeConstantDown>
+          <maxRotVelocity>1200.0</maxRotVelocity>
+          <motorType>velocity</motorType>
+        </motor>
+
+        <!-- Front-left rotor -->
+        <motor>
+          <jointName>fl_rotor_joint</jointName>
+          <linkName>fl_rotor</linkName>
+          <turningDirection>ccw</turningDirection>
+          <motorConstant>0.0075</motorConstant>         <!-- thrust coefficient -->
+          <momentConstant>0.06</momentConstant>
+          <commandSubTopic>gazebo/command/motor_speed</commandSubTopic>
+          <motorNumber>1</motorNumber>
+          <rotorDragCoefficient>2.5e-4</rotorDragCoefficient>
+          <rollingMomentCoefficient>1e-6</rollingMomentCoefficient>
+          <motorSpeedPubTopic>/hermes/motor_speed/m1</motorSpeedPubTopic>
+          <rotorVelocitySlowdownSim>1</rotorVelocitySlowdownSim>
+          <timeConstantUp>0.0125</timeConstantUp>
+          <timeConstantDown>0.025</timeConstantDown>
+          <maxRotVelocity>1200.0</maxRotVelocity>
+          <motorType>velocity</motorType>
+        </motor>
+
+        <!-- Front-right rotor -->
+        <motor>
+          <jointName>fr_rotor_joint</jointName>
+          <linkName>fr_rotor</linkName>
+          <turningDirection>cw</turningDirection>
+          <motorConstant>0.0075</motorConstant>         <!-- thrust coefficient -->
+          <momentConstant>0.06</momentConstant>
+          <commandSubTopic>gazebo/command/motor_speed</commandSubTopic>
+          <motorNumber>2</motorNumber>
+          <rotorDragCoefficient>2.5e-4</rotorDragCoefficient>
+          <rollingMomentCoefficient>1e-6</rollingMomentCoefficient>
+          <motorSpeedPubTopic>/hermes/motor_speed/m2</motorSpeedPubTopic>
+          <rotorVelocitySlowdownSim>1</rotorVelocitySlowdownSim>
+          <timeConstantUp>0.0125</timeConstantUp>
+          <timeConstantDown>0.025</timeConstantDown>
+          <maxRotVelocity>1200.0</maxRotVelocity>
+          <motorType>velocity</motorType>
+        </motor>
+
+        <!-- Rear-left rotor -->
+        <motor>
+          <jointName>rl_rotor_joint</jointName>
+          <linkName>rl_rotor</linkName>
+          <turningDirection>cw</turningDirection>
+          <motorConstant>0.0075</motorConstant>         <!-- thrust coefficient -->
+          <momentConstant>0.06</momentConstant>
+          <commandSubTopic>gazebo/command/motor_speed</commandSubTopic>
+          <motorNumber>3</motorNumber>
+          <rotorDragCoefficient>2.5e-4</rotorDragCoefficient>
+          <rollingMomentCoefficient>1e-6</rollingMomentCoefficient>
+          <motorSpeedPubTopic>/hermes/motor_speed/m3</motorSpeedPubTopic>
+          <rotorVelocitySlowdownSim>1</rotorVelocitySlowdownSim>
+          <timeConstantUp>0.0125</timeConstantUp>
+          <timeConstantDown>0.025</timeConstantDown>
+          <maxRotVelocity>1200.0</maxRotVelocity>
+          <motorType>velocity</motorType>
+        </motor>
+
+        <!-- Rear-right rotor -->
+        <motor>
+          <jointName>rr_rotor_joint</jointName>
+          <linkName>rr_rotor</linkName>
+          <turningDirection>ccw</turningDirection>
+          <motorConstant>0.0075</motorConstant>         <!-- thrust coefficient -->
+          <momentConstant>0.06</momentConstant>
+          <commandSubTopic>gazebo/command/motor_speed</commandSubTopic>
+          <motorNumber>4</motorNumber>
+          <rotorDragCoefficient>2.5e-4</rotorDragCoefficient>
+          <rollingMomentCoefficient>1e-6</rollingMomentCoefficient>
+          <motorSpeedPubTopic>/hermes/motor_speed/m4</motorSpeedPubTopic>
+          <rotorVelocitySlowdownSim>1</rotorVelocitySlowdownSim>
+          <timeConstantUp>0.0125</timeConstantUp>
+          <timeConstantDown>0.025</timeConstantDown>
+          <maxRotVelocity>1200.0</maxRotVelocity>
+          <motorType>velocity</motorType>
+        </motor>
+
+      </plugin>
+    </gazebo>
+
+  </xacro:macro>
+</robot>
+  

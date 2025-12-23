@@ -1,0 +1,79 @@
+# --- Clock (keep) ---
+- ros_topic_name: "/clock"
+  gz_topic_name: "/clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  gz_type_name: "gz.msgs.Clock"
+  direction: GZ_TO_ROS
+
+# --- Multicopter shared motor command (Actuators array) ---
+# Matches: <robotNamespace>hermes</robotNamespace>
+#          <commandSubTopic>gazebo/command/motor_speed</commandSubTopic>
+- ros_topic_name: "/hermes/gazebo/command/motor_speed"
+  gz_topic_name: "/hermes/gazebo/command/motor_speed"
+  ros_type_name: "actuator_msgs/msg/Actuators"
+  gz_type_name: "gz.msgs.Actuators"
+  direction: ROS_TO_GZ
+
+# --- (Optional) Per-joint velocity commands via JointController ---
+# These let you drive a single rotor for debugging.
+- ros_topic_name: "/model/hermes/joint/nose_rotor_joint/cmd_vel"
+  gz_topic_name: "/model/hermes/joint/nose_rotor_joint/cmd_vel"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/model/hermes/joint/fl_rotor_joint/cmd_vel"
+  gz_topic_name: "/model/hermes/joint/fl_rotor_joint/cmd_vel"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/model/hermes/joint/fr_rotor_joint/cmd_vel"
+  gz_topic_name: "/model/hermes/joint/fr_rotor_joint/cmd_vel"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/model/hermes/joint/rl_rotor_joint/cmd_vel"
+  gz_topic_name: "/model/hermes/joint/rl_rotor_joint/cmd_vel"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/model/hermes/joint/rr_rotor_joint/cmd_vel"
+  gz_topic_name: "/model/hermes/joint/rr_rotor_joint/cmd_vel"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+
+# --- (Optional) Per-motor speed feedback (from MulticopterMotorModel) ---
+# Matches your <motorSpeedPubTopic> motor_speed/{0..4}
+- ros_topic_name: "/hermes/motor_speed/m0"
+  gz_topic_name: "/hermes/motor_speed/m0"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/hermes/motor_speed/m1"
+  gz_topic_name: "/hermes/motor_speed/m1"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/hermes/motor_speed/m2"
+  gz_topic_name: "/hermes/motor_speed/m2"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/hermes/motor_speed/m3"
+  gz_topic_name: "/hermes/motor_speed/m3"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/hermes/motor_speed/m4"
+  gz_topic_name: "/hermes/motor_speed/m4"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: GZ_TO_ROS

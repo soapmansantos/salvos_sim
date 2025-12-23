@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <gazebo>
+
+    
+
+    <!-- Nose rotor -->
+    <plugin name="gz::sim::systems::JointController" filename="libgz-sim-joint-controller-system.so">
+      <joint_name>nose_rotor_joint</joint_name>
+      <topic>/model/hermes/joint/nose_rotor_joint/cmd_vel</topic>
+    </plugin>
+
+    <!-- Front-left rotor -->
+    <plugin name="gz::sim::systems::JointController" filename="libgz-sim-joint-controller-system.so">
+      <joint_name>fl_rotor_joint</joint_name>
+      <topic>/model/hermes/joint/fl_rotor_joint/cmd_vel</topic>
+    </plugin>
+
+    <!-- Front-right rotor -->
+    <plugin name="gz::sim::systems::JointController" filename="libgz-sim-joint-controller-system.so">
+      <joint_name>fr_rotor_joint</joint_name>
+      <topic>/model/hermes/joint/fr_rotor_joint/cmd_vel</topic>
+    </plugin>
+
+    <!-- Rear-left rotor -->
+    <plugin name="gz::sim::systems::JointController" filename="libgz-sim-joint-controller-system.so">
+      <joint_name>rl_rotor_joint</joint_name>
+      <topic>/model/hermes/joint/rl_rotor_joint/cmd_vel</topic>
+    </plugin>
+
+    <!-- Rear-right rotor -->
+    <plugin name="gz::sim::systems::JointController" filename="libgz-sim-joint-controller-system.so">
+      <joint_name>rr_rotor_joint</joint_name>
+      <topic>/model/hermes/joint/rr_rotor_joint/cmd_vel</topic>
+    </plugin>
+
+  </gazebo>
+</robot>
+  
