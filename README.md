@@ -1,13 +1,13 @@
 # Salvos Technologies Simulation and Control Stack
 
 
-`salvos_gz`
+## `salvos_gz`
 
 - ROS 2 and Gazebo simulation of a **263 kg heavy-lift tailsitter eVTOL pentarotor**, developed to design and test its custom flight control system.  
 
 
 
-`salvos_control`
+## `salvos_control`
 
 - A model-based, cascaded nonlinear thrust-vectoring controller (differential thrust only).
 
