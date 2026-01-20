@@ -2,11 +2,11 @@
 
 Tested on:
 
-ROS 2 Jazzy
+- ROS 2 Jazzy
 
-Gazebo Harmonic
+- Gazebo Harmonic
 
-Ubuntu 24.04
+- Ubuntu 24.04
 
 ### System dependencies
 
