@@ -86,3 +86,11 @@ A small pygame window opens and listens for keyboard input.
 - **w, a, s, d** — Manual control inputs  
   - Only active when manual mode is enabled (`m`)  
   - Height and heading set by controller
+ 
+
+## Contact
+
+Santos Santiago García Valls  
+Email: santosgarciavalls@gmail.com  
+LinkedIn: https://www.linkedin.com/in/santos-garcia-valls/
+
