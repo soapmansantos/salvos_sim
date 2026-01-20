@@ -104,8 +104,6 @@
     </spherical_coordinates>
 
     <!-- terrain -->
-
-    
     <include>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/Ground Plane</uri>
     </include>
