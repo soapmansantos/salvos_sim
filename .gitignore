@@ -14,3 +14,6 @@ __pycache__/
 # OS
 .DS_Store
 
+
+# Ignore large Moon texture
+salvos_gz/models/Moon 60S 30S/meshes/SLDEM2015_512_60S_30S_315_360.JPG
