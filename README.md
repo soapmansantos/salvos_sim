@@ -1,7 +1,5 @@
 ## Installation instructions
-
 Tested on:
-
 - ROS 2 Jazzy
 - Gazebo Harmonic
 - Ubuntu 24.04
