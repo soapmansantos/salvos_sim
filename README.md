@@ -3,7 +3,7 @@
 
 ## `salvos_gz`
 
-- ROS 2 and Gazebo simulation of a **263 kg heavy-lift tailsitter eVTOL pentarotor**, developed to design and test its custom flight control system.  
+- ROS 2 and Gazebo simulation of a **263 kg heavy-lift tailsitter eVTOL pentarotor**, developed to design and test its custom flight control system.<br><br>
 
 
 
