@@ -6,9 +6,7 @@ ROS 2 Jazzy
 
 Gazebo Harmonic
 
-Linux (Ubuntu recommended)
-
-Other ROS 2 distros may work but are not guaranteed.
+Ubuntu 24.04
 
 ### System dependencies
 
