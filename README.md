@@ -1,10 +1,16 @@
 # Salvos Technologies Simulation and Control Stack
 
-ROS 2 and Gazebo simulation of a **263 kg heavy-lift tailsitter eVTOL pentarotor**, developed to design and test its flight control system.  
+```bash
+salvos_gz
+```
+- ROS 2 and Gazebo simulation of a **263 kg heavy-lift tailsitter eVTOL pentarotor**, developed to design and test its flight control system.  
 
-The vehicle is designed for efficient forward flight and high payload capacity, which results in large inertia and aerodynamic sensitivity at low speeds. This makes position control during hover and landing especially challenging.
-
-To address this, the system uses a model-based, cascaded nonlinear thrust-vectoring controller. All control is achieved through differential thrust, with no aerodynamic control surfaces. This provides continuous control authority across hover, transition, and forward flight, enabling a single unified controller to be used throughout.
+```bash
+salvos_control
+```
+- A model-based, cascaded nonlinear thrust-vectoring controller (differential thrust only).
+- **Control challenge**
+    - The vehicle is designed for efficient forward flight and high payload capacity, which results in large inertia and aerodynamic sensitivity at low speeds. This makes position control during hover and landing especially challenging.
 
 
 
