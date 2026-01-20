@@ -66,7 +66,6 @@ class ImuSubscriber(Node):
 		#self.get_logger().info('Linear acceleration: "%s"' % self.data.linear_acceleration)
 
 
-
 class MagnetometerSubscriber(Node):
 	def __init__(self):
 		super().__init__('magnetometer_subscriber')
@@ -78,7 +77,6 @@ class MagnetometerSubscriber(Node):
 	def listener_callback(self, msg: MagneticField):
 		self.data = msg
 		# self.get_logger().info(f'Mag field (T): x={msg.magnetic_field.x:.3e}, y={msg.magnetic_field.y:.3e}, z={msg.magnetic_field.z:.3e}')
-
 
 
 class BaroSubscriber(Node):
@@ -206,7 +204,7 @@ def get_sensor_data(imu, mag, lidar, baro, pos):
 	mag_data = {'mx': m.x, 'my': m.y, 'mz': m.z}
 	baro_data = {'pressure': baro.fluid_pressure}
 	lidar_data = {'distance': lidar}
-	pos_data = {'x': pos[0], 'y': pos[1], 'z': pos[2]}
+	pos_data = {'x': pos[0], 'y': pos[1], 'z': pos[2]+0.335}
 
 
 	sensor_data = {'imu': imu_data, 'mag': mag_data, 'baro': baro_data, 'lidar': lidar_data, 'pos': pos_data}
@@ -234,18 +232,16 @@ def init_state(sensors):
 	P0, T0, g, L, Rg, M = 101325.0, 288.15, 9.80665, 0.0065, 8.31447, 0.0289644
 	baro_alt = (T0/L) * (1 - (P/P0)**((Rg*L)/(g*M)))
 
-	# Lidar gives AGL; fuse with GPS z (AMSL/local) for an initial z
 	z0 = 0.6*baro_alt + 0.4*(sensors['pos']['z'] - sensors['lidar']['distance'])
 
 	z0 = sensors['lidar']['distance']
+	z0 = sensors['pos']['z']
 
-	# Attitude from IMU quaternion, yaw lightly corrected by magnetometer
 	roll0, pitch0, yaw_imu = Rt.from_quat(sensors['imu']['orientation']).as_euler('xyz', False)
 	yaw_mag = np.arctan2(sensors['mag']['my'], sensors['mag']['mx'])
 	alpha = 1
 	yaw0 = alpha*yaw_imu + (1-alpha)*yaw_mag
 
-	# Start at rest
 	vx0 = vy0 = vz0 = 0.0
 	p0, q0, r0 = sensors['imu']['angular_velocity']
 

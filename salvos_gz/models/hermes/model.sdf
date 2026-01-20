@@ -25,13 +25,6 @@
     <plugin filename="gz-sim-air-pressure-system"
             name="gz::sim::systems::AirPressure"/>
 
-    <!--
-    <plugin name="gz::sim::systems::PosePublisher" filename="gz-sim-pose-publisher-system">
-      <publish_model_pose>true</publish_model_pose>
-      <publish_link_pose>false</publish_link_pose>
-      <update_frequency>100</update_frequency>
-    </plugin>
-  -->
 
     <plugin name="gz::sim::systems::PosePublisher" filename="gz-sim-pose-publisher-system">
       <publish_model_pose>true</publish_model_pose>
@@ -51,6 +44,7 @@
 
     <link name="frame">
       <inertial>
+        <pose>0 0 0.6553 0 -1.571 0</pose> 
         <mass>263.700</mass> <!--actual mass:263.700-->
         <inertia>
           <ixx>148.894</ixx><ixy>0.0</ixy><ixz>0.0</ixz>
@@ -60,7 +54,7 @@
       </inertial>
 
       <visual name="frame_visual">
-        <pose>0 0 2 0 -1.571 0</pose>
+        <pose>0 0 1.4427 0 -1.571 0</pose>
         <geometry><mesh><uri>meshes/hermesv3.stl</uri></mesh></geometry>
         <cast_shadows>true</cast_shadows>
         <material>
@@ -69,7 +63,7 @@
         </material>
       </visual>
       <collision name="frame_collision">
-        <pose>0 0 2 0 -1.571 0</pose>
+        <pose>0 0 1.4427 0 -1.571 0</pose>
         <geometry><mesh><uri>meshes/hermesv3.stl</uri></mesh></geometry>
       </collision>
 
@@ -95,34 +89,41 @@
         </imu>
       </sensor>
 
-      <sensor name='gpu_lidar' type='gpu_lidar'>
-          <pose relative_to='base_link'>0 0 0.5 0 1.5708 0</pose>
-          <topic>/lidar</topic>
-          <update_rate>10</update_rate>
-          <ray>
-              <scan>
-                  <horizontal>
-                      <samples>181</samples>
-                      <resolution>1</resolution>
-                      <min_angle>-1.396263</min_angle>
-                      <max_angle>1.396263</max_angle>
-                  </horizontal>
-                  <vertical>
-                      <samples>1</samples>
-                      <resolution>1</resolution>
-                      <min_angle>0</min_angle>
-                      <max_angle>0</max_angle>
-                  </vertical>
-              </scan>
-              <range>
-                  <min>0.05</min>
-                  <max>200.0</max>
-                  <resolution>0.01</resolution>
-              </range>
-          </ray>
-          <always_on>1</always_on>
-          <visualize>true</visualize>
+      <sensor name="gpu_lidar" type="gpu_lidar">
+        <pose relative_to="base_link">0 0 0.5 0 1.5708 0</pose>
+
+        <topic>/lidar</topic>
+        <update_rate>10</update_rate>
+
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>181</samples>
+              <resolution>1</resolution>
+              <min_angle>-1.396263</min_angle>
+              <max_angle>1.396263</max_angle>
+            </horizontal>
+
+            <vertical>
+              <samples>1</samples>
+              <resolution>1</resolution>
+              <min_angle>0</min_angle>
+              <max_angle>0</max_angle>
+            </vertical>
+          </scan>
+
+          <range>
+            <min>0.05</min>
+            <max>200.0</max>
+            <resolution>0.01</resolution>
+          </range>
+        </ray>
+
+        <always_on>1</always_on>
+        <visualize>true</visualize>
       </sensor>
+
+
 
       <!-- MAGNETOMETER -->
       <sensor name="mag" type="magnetometer">
@@ -201,7 +202,7 @@
     </link>
 
     <link name="nose_rotor">
-      <pose>0 0 2.5 0 0 0</pose>
+      <pose>0 0 1.945 0 0 0</pose>
       <inertial>
         <mass>0.5</mass>
         <inertia>
@@ -230,7 +231,7 @@
     </link>
 
     <link name="fl_rotor">
-      <pose>-0.875 -0.875 1.2 0 0 0</pose> <!--used 0.875 at xy-->
+      <pose>-0.875 -0.875 0.645 0 0 0</pose> <!--used 0.875 at xy-->
       <inertial>
         <mass>0.5</mass>
         <inertia>
@@ -259,7 +260,7 @@
     </link>
 
     <link name="fr_rotor">
-      <pose>-0.875 0.875 1.2 0 0 0</pose> <!--used 0.875 at xy-->
+      <pose>-0.875 0.875 0.645 0 0 0</pose> <!--used 0.875 at xy-->
       <inertial>
         <mass>0.5</mass>
         <inertia>
@@ -288,7 +289,7 @@
     </link>
 
     <link name="rl_rotor">
-      <pose>0.925 -0.925 1.2 0 0 0</pose> <!--used 0.925 at xy-->
+      <pose>0.925 -0.925 0.645 0 0 0</pose> <!--used 0.925 at xy-->
       <inertial>
         <mass>0.5</mass>
         <inertia>
@@ -317,7 +318,7 @@
     </link>
 
     <link name="rr_rotor">
-      <pose>0.925 0.925 1.2 0 0 0</pose> <!--used 0.925 at xy-->
+      <pose>0.925 0.925 0.645 0 0 0</pose> <!--used 0.925 at xy-->
       <inertial>
         <mass>0.5</mass>
         <inertia>

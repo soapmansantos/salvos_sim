@@ -47,7 +47,7 @@ setup(
     zip_safe=True,
     maintainer='santos',
     maintainer_email='santosgarciavalls@gmail.com',
-    description='Simulation of Hermes drone',
+    description='Simulation of Hermes drone for Salvos Technologies',
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={'console_scripts': [

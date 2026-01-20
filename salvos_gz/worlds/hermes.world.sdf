@@ -1,55 +1,36 @@
 <?xml version="1.0"?>
 <sdf version="1.10">
   <world name="empty">
-    <plugin
-        filename="gz-sim-physics-system"
-        name="gz::sim::systems::Physics">
-    </plugin>
 
-    <plugin
-        filename="gz-sim-scene-broadcaster-system"
-        name="gz::sim::systems::SceneBroadcaster">
-    </plugin>
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
 
-    <!-- Basic physics -->
     <gravity>0 0 -9.81</gravity>
     <atmosphere type="adiabatic"/>
 
     <wind>
-      <!-- m/s in world frame -->
       <linear_velocity>5 0 0</linear_velocity>
     </wind>
 
-    <plugin
-      filename="gz-sim-wind-effects-system"
-      name="gz::sim::systems::WindEffects">
-
-      <!-- Horizontal magnitude dynamics -->
+    <plugin filename="gz-sim-wind-effects-system" name="gz::sim::systems::WindEffects">
       <horizontal>
         <magnitude>
-          <!-- acts like a time constant: bigger = slower changes -->
           <time_for_rise>2.0</time_for_rise>
-
-          <!-- periodic gust component -->
           <sin>
             <amplitude_percent>0.25</amplitude_percent>
             <period>6.0</period>
           </sin>
-
-          <!-- random component -->
           <noise>
-            <!-- (exact fields depend on gz-sim version, but this block is supported by the system) -->
             <type>gaussian</type>
             <mean>0.0</mean>
             <stddev>0.5</stddev>
           </noise>
         </magnitude>
 
-        <!-- Direction “wander” -->
         <direction>
           <time_for_rise>3.0</time_for_rise>
           <sin>
-            <amplitude>0.2</amplitude>   <!-- radians -->
+            <amplitude>0.2</amplitude>
             <period>10.0</period>
           </sin>
           <noise>
@@ -60,7 +41,6 @@
         </direction>
       </horizontal>
 
-      <!-- Optional vertical component -->
       <vertical>
         <time_for_rise>5.0</time_for_rise>
         <noise>
@@ -70,20 +50,49 @@
         </noise>
       </vertical>
 
-      <!-- 3) Spatial non-uniformity: scale forces by region / position -->
       <force_approximation_scaling_factor>
-        <!-- Example: stronger wind for x >= 0, weaker for x < 0 -->
         <when xge="0">1.0</when>
         <when xlt="0">0.3</when>
       </force_approximation_scaling_factor>
-
     </plugin>
 
+    <light name="sun" type="directional">
+      <pose>0 0 200 0 0 0</pose>
+      <direction>-0.35 0.15 -1</direction>
+
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+
+      <attenuation>
+        <range>2000</range>
+        <constant>1</constant>
+        <linear>0</linear>
+        <quadratic>0</quadratic>
+      </attenuation>
+
+      <cast_shadows>true</cast_shadows>
+    </light>
 
     <scene>
-      <ambient>0.4 0.4 0.4 1</ambient>
-      <background>0.7 0.8 1.0 1</background>
+      <ambient>0.18 0.18 0.18 1</ambient>
+
+      <background>0.60 0.70 0.85 1</background>
+
       <shadows>true</shadows>
+
+      <fog>
+        <type>linear</type>
+        <color>0.60 0.70 0.85 1</color>
+        <start>250</start>
+        <end>1200</end>
+      </fog>
+
+
+      <sky>
+        <time>12</time>
+        <clouds>true</clouds>
+      </sky>
+    
     </scene>
 
     <spherical_coordinates>
@@ -94,21 +103,23 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
 
+    <!-- terrain -->
+    <include>
+      <uri>file:///home/santos/dev_ws/src/salvos_gz/models/Moon 60S 30S/model.sdf</uri>
+    </include>
 
     <!--
     <include>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/Ground Plane</uri>
     </include>
     -->
-  
-    <include>
-      <uri>file:///home/santos/dev_ws/src/salvos_gz/worlds/objects.sdf</uri>
-    </include>
 
+    <!-- Hermes -->
     <include>
       <uri>file:///home/santos/dev_ws/src/salvos_gz/models/hermes/model.sdf</uri>
       <name>hermes</name>
-      <pose>0 0 0.2 0 0 0</pose>
+      <pose>0 0 -0.5 0 0 0</pose>
     </include>
+
   </world>
 </sdf>

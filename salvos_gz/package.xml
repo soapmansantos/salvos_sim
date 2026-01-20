@@ -4,7 +4,7 @@
   <name>salvos_gz</name>
   <version>0.0.0</version>
   <description>Simulation of Hermes drone</description>
-  <maintainer email="santos@todo.todo">santos</maintainer>
+  <maintainer email="santosgarciavalls@gmail.com">santos</maintainer>
   <license>Apache-2.0</license>
 
   <test_depend>ament_copyright</test_depend>

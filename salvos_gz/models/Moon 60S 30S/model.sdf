@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<sdf version="1.11">
+  <model name="moon_60S_30S">
+    <pose frame="">0 0 0 0 0 0</pose>
+    <static>1</static>
+
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/moon_60S_30S.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <cast_shadows>true</cast_shadows>
+
+        <geometry>
+          <mesh>
+            <uri>meshes/moon_60S_30S.dae</uri>
+          </mesh>
+        </geometry>
+
+        <material>
+          <ambient>0.06 0.16 0.10 1</ambient>
+          <diffuse>0.14 0.34 0.22 1</diffuse>
+          <specular>0.02 0.02 0.02 1</specular>
+        </material>
+
+      </visual>
+    </link>
+
+
+
+  </model>
+</sdf>

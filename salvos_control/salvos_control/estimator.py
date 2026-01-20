@@ -2,6 +2,7 @@ import math
 import numpy as np
 from scipy.spatial.transform import Rotation as Rt
 
+
 def state_estimate(sensors, prev_state, dt):
     """
     sensors: dict with:
@@ -38,7 +39,6 @@ def state_estimate(sensors, prev_state, dt):
     lidar_dist = sensors['lidar']['distance']
 
     z_prev = z
-    #z = lidar_dist
 
     alpha_vz = 1#0.98
 

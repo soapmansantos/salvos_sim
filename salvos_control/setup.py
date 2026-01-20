@@ -15,12 +15,12 @@ setup(
     zip_safe=True,
     maintainer='santos',
     maintainer_email='santosgarciavalls@gmail.com',
-    description='TODO: Package description',
+    description='Control System for Hermes, from Salvos Technologies',
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-                'talker = salvos_control.main:main'
+                'main = salvos_control.main:main'
         ],
     },
 )

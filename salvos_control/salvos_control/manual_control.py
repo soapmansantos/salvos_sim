@@ -6,13 +6,11 @@ import math
 
 class ManualControl():
 
-    def __init__(self, height, x, y):
+    def __init__(self, height):
         self.height = height
-        self.x = x
-        self.y = y
         self.thrust = 0.0
         self.yaw = 0.0
-        self.max_pitch = math.pi / 10
+        self.max_pitch = math.pi / 2.5
 
 
     def detect_keys(self, keys: list):
@@ -44,21 +42,16 @@ class ManualControl():
             b = kp.get(b_key, False)
             pairs.append(resolve(a, b))
 
-
         cmd = [0 if v == -1 else (self.max_pitch if v else -self.max_pitch) for v in pairs] #= [thrust, roll, pitch, yaw], placeholder!
 
         self.thrust += cmd[0]*math.pi
-
         if self.thrust <= 0:
             self.thrust = 0
-
-
         self.thrust = cmd[0]*4
+
         cmd.pop(0)
         cmd.insert(0, self.thrust)
         cmd.append(self.height)
-        cmd.append(self.x)
-        cmd.append(self.y)
 
         return cmd
 
@@ -66,19 +59,6 @@ class ManualControl():
 
 
 
-def slider_input():
-    return None
-
-
-def cmd_to_rpy(cmd):
-
-    max_angle = math.pi / 8
-
-
-
-
-
-    
 
 
 
