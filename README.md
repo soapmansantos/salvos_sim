@@ -14,8 +14,7 @@
 
 ## Features
 - Robust position control under wind gusts (hover)
-    - 30+ knots &rarr; horizontal accuracy of &plusmn; 0.8 metre
-    - 15-20 knots &rarr; horizontal accuracy of &plusmn; 0.3 metre
+    - 30+ knots &rarr; horizontal accuracy of &plusmn; 0.3 metre
  
 - Trimmed cruise at constant altitude (forward flight)
     - 65 m/s at ~ 67% throttle
